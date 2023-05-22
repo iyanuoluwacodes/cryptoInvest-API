@@ -88,7 +88,7 @@ function commitToDB(promise) {
     });
 }
 exports.app.listen({
-    port: 3005,
+    port: 3000,
 }, function (err, address) {
     if (err) {
         console.log(err);
