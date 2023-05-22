@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String @id
+  nickname     String
+  balance      String @default("0")
+  totalRevenue String @default("0")
+  dailyEarning String @default("0")
+}
+
+model EthUSDCPair {
+  id      String @id @default("ETHUSDC")
+  binance String @default("1855.48")
+  huobi   String @default("1855.48")
+  okex    String @default("1855.48")
+  kucoin  String @default("1855.48")
+  gateio  String @default("1855.48")
+  kraken  String @default("1855.48")
+}
+
+model Exchanges {
+  id            String @id
+  ETHUSDC       String
+  btc24hrvolume String
+  btcLiq        String
+  eth24hrVolume String
+  ethLiq        String
+}

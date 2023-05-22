@@ -1,0 +1,29 @@
+{
+  "devDependencies": {
+    "@types/node": "^18.15.13",
+    "prisma": "^4.13.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.2.1",
+    "@fastify/sensible": "^5.2.0",
+    "@fastify/swagger": "^8.3.1",
+    "@moralisweb3/common-evm-utils": "^2.21.0",
+    "@prisma/client": "^4.13.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.15.0",
+    "moralis": "^2.21.0"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon api/serverless.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
