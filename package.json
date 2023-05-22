@@ -15,8 +15,9 @@
     "fastify": "^4.15.0",
     "moralis": "^2.21.0"
   },
-  "name": "server",
   "version": "1.0.0",
+  "license": "MIT",
+  "name": "server",
   "main": "config.js",
   "scripts": {
     "build": "prisma migrate reset -f",
@@ -27,6 +28,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "description": ""
 }
