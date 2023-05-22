@@ -19,8 +19,11 @@
   "version": "1.0.0",
   "main": "config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon api/serverless.js"
+    "build": "prisma migrate reset -f",
+    "prisma:generate": "prisma generate",
+    "dev": "PORT=3000 node src/index.js",
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
