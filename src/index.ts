@@ -44,9 +44,14 @@ async function commitToDB(promise: any) {
   }
   return data;
 }
+
+type por = undefined | number;
+interface lis {
+  port: por;
+}
 app.listen(
   {
-    port: 3000,
+    port: Number(process.env.PORT) || 3000,
   },
   function (err, address) {
     if (err) {
