@@ -44,10 +44,10 @@ async function commitToDB(promise: any) {
   }
   return data;
 }
-
+const PORT = (process.env.PORT as unknown as number) || 3000;
 app.listen(
   {
-    port: process.env.PORT as unknown as number,
+    port: PORT,
   },
   function (err, address) {
     if (err) {
