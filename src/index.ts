@@ -46,10 +46,10 @@ async function commitToDB(promise: any) {
 }
 const PORT = (process.env.PORT as unknown as number) || 3000;
 app.listen(
-  // {
-  //   port: PORT,
-  // },
-  PORT,
+  {
+    port: PORT,
+    host: "0.0.0.0",
+  },
   function (err, address) {
     if (err) {
       console.log(err);
