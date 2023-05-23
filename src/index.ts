@@ -58,6 +58,9 @@ app.listen(
 interface uid {
   id: string;
 }
+app.get("/", () => {
+  return " api is active ";
+});
 app.get("/users/all", async (req, res) => {
   return await commitToDB(prisma.user.findMany());
 });
