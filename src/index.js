@@ -88,11 +88,13 @@ function commitToDB(promise) {
     });
 }
 exports.app.listen({
-    port: Number(process.env.PORT) || 3000,
+    port: process.env.PORT,
 }, function (err, address) {
     if (err) {
         console.log(err);
     }
+    console.log("listenin address:", address);
+    console.log(process.env.PORT);
 });
 exports.app.get("/", function () {
     return " api is active ";

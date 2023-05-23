@@ -47,12 +47,14 @@ async function commitToDB(promise: any) {
 
 app.listen(
   {
-    port: Number(process.env.PORT) || 3000,
+    port: process.env.PORT as unknown as number,
   },
   function (err, address) {
     if (err) {
       console.log(err);
     }
+    console.log("listenin address:", address);
+    console.log(process.env.PORT);
   }
 );
 
