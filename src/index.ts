@@ -27,6 +27,7 @@ app.register(sensible);
 app.register(cors, {
   origin: [`${process.env.CLIENT_URL}`, `${process.env.ADMIN_URL}`],
   credentials: true,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 });
 app.register(fastifySwagger);
 // app.register(bcrypt, {
