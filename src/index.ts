@@ -30,6 +30,7 @@ app.register(cors, {
 });
 console.log("client url =>", process.env.CLIENT_URL);
 console.log("admin url =>", process.env.ADMIN_URL);
+console.log("checking somthing");
 app.register(fastifySwagger);
 // app.register(bcrypt, {
 //   saltWorkFactor: 8,

@@ -65,6 +65,7 @@ exports.app.register(cors_1.default, {
 });
 console.log("client url =>", process.env.CLIENT_URL);
 console.log("admin url =>", process.env.ADMIN_URL);
+console.log("checking somthing");
 exports.app.register(swagger_1.default);
 // app.register(bcrypt, {
 //   saltWorkFactor: 8,
