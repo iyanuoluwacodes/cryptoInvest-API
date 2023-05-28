@@ -60,7 +60,7 @@ dotenv.config();
 // Registering our middlewares
 exports.app.register(sensible_1.default);
 exports.app.register(cors_1.default, {
-    origin: "https://localhost:5174",
+    origin: "https://localhost",
     credentials: true,
 });
 console.log("client url =>", process.env.CLIENT_URL);
