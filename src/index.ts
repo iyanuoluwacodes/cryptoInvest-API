@@ -25,9 +25,8 @@ dotenv.config();
 // Registering our middlewares
 app.register(sensible);
 app.register(cors, {
-  origin: [`${process.env.CLIENT_URL}`, `${process.env.ADMIN_URL}`],
+  origin: "https://localhost:5174",
   credentials: true,
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 });
 app.register(fastifySwagger);
 // app.register(bcrypt, {
