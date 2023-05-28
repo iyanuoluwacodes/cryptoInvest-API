@@ -28,6 +28,8 @@ app.register(cors, {
   origin: "https://localhost:5174",
   credentials: true,
 });
+console.log("client url =>", process.env.CLIENT_URL);
+console.log("admin url =>", process.env.ADMIN_URL);
 app.register(fastifySwagger);
 // app.register(bcrypt, {
 //   saltWorkFactor: 8,
