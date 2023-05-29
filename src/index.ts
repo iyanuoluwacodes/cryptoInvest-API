@@ -23,7 +23,12 @@ const prisma = new PrismaClient();
 dotenv.config();
 
 // Registering our middlewares
-const origins = [`${process.env.CLIENT_URL}`, `${process.env.ADMIN_URL}`];
+const origins = [
+  `${process.env.CLIENT_URL}`,
+  `${process.env.ADMIN_URL}`,
+  "https://localhost:5173",
+  "https://localhost:5174",
+];
 console.log(origins);
 app.register(sensible);
 app.register(cors, {
@@ -32,7 +37,6 @@ app.register(cors, {
 });
 console.log("client url =>", process.env.CLIENT_URL);
 console.log("admin url =>", process.env.ADMIN_URL);
-console.log("checking somthing");
 app.register(fastifySwagger);
 // app.register(bcrypt, {
 //   saltWorkFactor: 8,
@@ -110,6 +114,7 @@ app.get<{
     })
   );
 });
+
 interface newUserData {
   id: string;
   nickname: string;

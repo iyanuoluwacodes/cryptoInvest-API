@@ -58,7 +58,12 @@ exports.app = (0, fastify_1.default)({
 var prisma = new client_1.PrismaClient();
 dotenv.config();
 // Registering our middlewares
-var origins = ["".concat(process.env.CLIENT_URL), "".concat(process.env.ADMIN_URL)];
+var origins = [
+    "".concat(process.env.CLIENT_URL),
+    "".concat(process.env.ADMIN_URL),
+    "https://localhost:5173",
+    "https://localhost:5174",
+];
 console.log(origins);
 exports.app.register(sensible_1.default);
 exports.app.register(cors_1.default, {
@@ -67,7 +72,6 @@ exports.app.register(cors_1.default, {
 });
 console.log("client url =>", process.env.CLIENT_URL);
 console.log("admin url =>", process.env.ADMIN_URL);
-console.log("checking somthing");
 exports.app.register(swagger_1.default);
 // app.register(bcrypt, {
 //   saltWorkFactor: 8,
