@@ -23,9 +23,11 @@ const prisma = new PrismaClient();
 dotenv.config();
 
 // Registering our middlewares
+const origins = [`${process.env.CLIENT_URL}`, `${process.env.ADMIN_URL}`];
+console.log(origins);
 app.register(sensible);
 app.register(cors, {
-  origin: "https://localhost",
+  origin: origins,
   credentials: true,
 });
 console.log("client url =>", process.env.CLIENT_URL);
