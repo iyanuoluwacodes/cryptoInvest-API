@@ -179,7 +179,7 @@ app.patch<{
   return await commitToDB(
     prisma.ethUSDCPair.update({
       where: {
-        id: "prices",
+        id: "ETHUSDC",
       },
       data: {
         binance: req.body.binance,

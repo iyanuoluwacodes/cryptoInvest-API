@@ -204,7 +204,7 @@ exports.app.patch("/updatePrices/ETHUSDC", function (req, res) { return __awaite
         switch (_a.label) {
             case 0: return [4 /*yield*/, commitToDB(prisma.ethUSDCPair.update({
                     where: {
-                        id: "prices",
+                        id: "ETHUSDC",
                     },
                     data: {
                         binance: req.body.binance,
